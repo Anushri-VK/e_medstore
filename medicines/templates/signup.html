@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up - MedsOn</title>
+	 <link rel="icon" href="https://i.ibb.co/cFMK9NG/notfavicon3.png" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{
+			margin: 0;
+			background: #4CA1AF;
+      background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);
+      background: linear-gradient(to right, #C4E0E5, #4CA1AF);
+
+		}
+ .flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: black;
+}
+
+.flex-container > div {
+  background-color: black;
+  width: 100px;
+  color: #808080;
+  height: 0%;
+  text-align: center;
+  margin: 0px;
+  margin-right: 2%;
+  line-height: 55px;
+  font-size: 1.12em;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+a {
+  color:#fff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color: #fdec6e;
+  text-shadow:0px 0px 20px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.simple-form
+    {
+        text-align: center;
+        margin:40px 300px;
+        color: black;
+    }
+    #registration
+    {
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-top:1%;
+        width: 50%;
+        padding: 10px 20px;
+        border-radius:5%;
+        border: 4px solid black;
+    }
+    .textbox
+    {
+        width: 70%;
+        padding: 10px;
+        background-color: #;
+
+        border-radius: 5px;
+
+
+
+    }
+    table{
+    	width: 100%;
+    }
+    td{
+    	width: 50%;
+    }
+    tr{
+     	width: 50%;
+    }
+    .textbox1
+    {
+        width: 70%;
+        padding: 10px;
+
+        border-radius: 5px;
+
+    }
+    .selectionbox
+    {
+        width:35%;
+        padding: 10px 0px 10px 0px;
+        border-radius: 5px;
+        font-size: 0.8em;
+
+
+    }
+    .text
+    {
+        float:left;
+        font-size:20px;
+        color:black;
+    }
+   	.but
+     {
+        margin-bottom:0px;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 1em;
+        margin-left: auto;
+        margin-right:auto;
+        display:flex;
+        transition-duration: 0.2s;
+        cursor: pointer;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px
+        rgba(0, 0, 0, 0.3);
+        letter-spacing: 2.5px;
+        outline: none;
+        margin-top:0px;
+        position: relative;
+    }
+    .buttonc
+     {
+        background-color: white;
+        color: black;
+      }
+@media (max-width: 480px){
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 0.6em;
+	}
+	#registration{
+		width: 100%;
+	}
+	table{
+		width: 100%;
+
+	}
+
+	}
+@media (max-width: 767px) {
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 0.7em;
+	}
+	table{
+		width: 100%;
+
+	}
+	#registration{
+		width: 80%;
+	}
+
+	}
+@media (min-width: 768px) and (max-width: 979px)  {
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 1em;
+		margin-right: 6%;
+	}
+	table {
+		width: 100%;
+	}
+	#registration{
+		width: 60%;
+	}
+
+	}
+	hr.new1 {
+  border-top: 2px solid black;
+}
+</style>
+
+</head>
+<body>
+  <div class="flex-container">
+    <div style="margin-left: -1%;">
+      <a href="/signin/">Login</a></div>
+      <div>
+        <a href="/contactus/">Contact Us</a>
+      </div>
+      <div>
+        <a href="/">Home</a>
+      </div>
+    </div>
+    <h1 style=" padding-left: 1%; margin-top: -3.8%; color: white; font-size: 3em;">MedsOn
+    </h1>
+    <form class="simple-form" action="/signup/" id="registration" method="POST">
+      {% csrf_token %}
+      <center>
+        <font size=6 color=black>
+          <b>Registration Page</b>
+        </font>
+      </center>
+      <br>
+      <div class="form-group">
+        {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+          <div class="alert alert-success"> {{ message }}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <hr class="new1">
+      <table cellpadding="3" width="100%" align="center" cellspacing="10">
+        <tr>
+          <td>
+            <font class="text" >First Name</font>
+          </td>
+          <td>
+            <input type="text" name="fname" id="fname" class="textbox"  placeholder="First Name">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <font class="text" >Middle Name</font>
+          </td>
+          <td>
+            <input type="text" name="mname" id="mname" class="textbox" placeholder="Middle Name">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <font class="text" >Last Name</font>
+          </td>
+          <td>
+            <input type="text" name="lname" id="lname" class="textbox"  placeholder="Last Name">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <font class="text" >Email ID</font>
+          </td>
+          <td>
+            <input type="text" required minlength="10" maxlength="30" name="email" id="email" class="textbox1"  placeholder="EmailAddress">
+          </td>
+          </tr>
+          <tr>
+            <td>
+              <font class="text" >Gender</font>
+            </td>
+            <td>
+              <select style="width: 77%; font-size: 15px;" class="selectionbox" name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="rather">Rather not say</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font class="text">Phone Number</font>
+            </td>
+            <td>
+              <select style="width: 20%;" name="selphone" id="selphone" class="selectionbox">
+                <option value="91">+91</option>
+                <option value="92">+92</option>
+                <option value="93">+93</option>
+                <option value="94">+94</option>
+                <option value="95">+95</option>
+                <option value="96">+96</option>
+              </select>
+              <input style="width: 50%;" type="tel" id="contactnumber" name='contactnumber' maxlength="10" size="10" class="textbox" placeholder="Phone Number">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font class="text" >Password</font>
+            </td>
+            <td>
+              <input type="password" name="password" id="password" class="textbox1" placeholder="Enter Password">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font class="text">Confirm Password</font>
+            </td>
+            <td>
+              <input type="password" required name="cpassword" id="cpassword" class="textbox1" placeholder="Enter Password Again">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font class="text">Address</font>
+            </td>
+            <td>
+              <input type="text" required name="address" id="address" class="textbox1" placeholder="Enter Your Address">
+            </td>
+          </tr>
+        </table>
+        <input type="submit" value="REGISTER" class="but buttonc">
+        <br>
+      </form>
+    </body>
+    </html>

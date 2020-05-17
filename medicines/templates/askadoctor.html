@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://i.ibb.co/cFMK9NG/notfavicon3.png" type="image/x-icon" />
+	<title>Ask a Doctor - MedsOn</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{
+			margin: 0;
+			font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+				background-image: url('https://i.ibb.co/sPnj9TT/bg1.jpg');
+				background-size: 100%;
+      }
+ .flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: black;
+}
+
+.flex-container > div {
+  background-color: black;
+  width: 100px;
+  color: #808080;
+  height: 0%;
+  text-align: center;
+  margin: 0px;
+  margin-right: 2%;
+  line-height: 55px;
+  font-size: 1.12em;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+a {
+  color:#fff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color: #fdec6e;
+  text-shadow:0px 0px 20px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.background{
+	background-image: url('images/askdoctor.png');
+	background-repeat: no-repeat;
+	height: auto;
+	width: auto;
+}
+.flexbox{
+	width: 50%;
+	height: 70%;
+	border-radius: 20px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.75);
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 1.5%;
+    line-height: 1;
+}
+.inputbox{
+
+  width: 80%;
+  height: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+textarea {
+    width: 100px;
+    height: 100px;
+    resize: none;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+}
+
+@media (max-width: 480px){
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 0.6em;
+	}
+
+	}
+@media (max-width: 767px) {
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 0.7em;
+	}
+
+	}
+@media (min-width: 768px) and (max-width: 979px)  {
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 1em;
+		margin-right: 6%;
+	}
+
+	}
+</style>
+
+</head>
+<body>
+<form class="simple-form" action="/askadoctor/" id="askadoctor" method="post">
+  {% csrf_token %}
+  <div class="flex-container">
+    <div style="margin-left: -1%;"><a href="/">Logout</a></div>
+    <div><a href="/contactuslogin/">Contact Us</a></div>
+    <div><a href="/aboutuslogin/">About</a></div>
+    <div><a href="/store/">Store</a></div>
+  </div>
+  <h1 style=" padding-left: 1%; margin-top: -3.8%; color: white; font-size: 3em;">MedsOnline</h1>
+  <div style="text-align: center; color:white; font-size: 2em; ">Get brief answers for your   health queries from top Doctors.</div>
+  <div class="form-group">
+    {% if messages %}
+    <div class="messages">
+      {% for message in messages %}
+      <div class="alert alert-success" style="color:white; font-size:1.4em;text-align:center;padding-top:2%;"> {{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="flexbox">
+    <h2>What is your question?</h2>
+    <textarea   title="Must be alphabet only" name="question" id="question" rows="4" cols="50"  class="inputbox" style="height: 10vh;"  required="required" placeholder="Enter question for you or someone else. "></textarea>
+    <h2>I am looking for</h2>
+		<select style="width: 50%;height: 5vh; font-size: 15px;" class="selectionbox" name="looking" id="looking">
+      <option value="Just Information">Just information</option>
+      <option value="Treatment Details">Treatment details</option>
+    </select>
+    <h2>Where should we send secure notifications?</h2>
+    <input type="text" required minlength="10" maxlength="30" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{3,})+$" name="email" id="email" class="inputbox" style="width: 50%; "  placeholder="Email Address">
+    <br>
+    <select style="width: 10%;height: 6vh;" name="selphone" id="selphone" class="selectionbox">
+      <option value="91">+91</option>
+      <option value="92">+92</option>
+      <option value="93">+93</option>
+      <option value="94">+94</option>
+      <option value="95">+95</option>
+      <option value="96">+96</option></select>
+      <input style="width: 39%; height: 5vh;" type="tel" id="contactnumber" name="contactnumber" maxlength="10" size="10" pattern="^\d{10}" title="Must be of 10 digit" class="textbox" placeholder="Phone Number"><br><br>
+      <button type="submit" id="submit" style="width:50%; height: 7vh; background-color: #008080	; border-radius: 10px;    font-size: 18.5px !important; box-shadow: 3px 3px 5px 3px grey; cursor: pointer; color: white;">Ask FREE Question Securely</button><br><br>
+    </div>
+  </form>
+</body>
+</html>

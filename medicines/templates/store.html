@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://i.ibb.co/cFMK9NG/notfavicon3.png" type="image/x-icon" />
+	<title>Medicine Store - MedsOn</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{
+			margin: 0;
+		}
+ .flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: black;
+}
+
+.flex-container > div {
+  background-color: black;
+  width: 100px;
+  color: #808080;
+  height: 0%;
+  text-align: center;
+  margin: 0px;
+  margin-right: 2%;
+  line-height: 55px;
+  font-size: 1.12em;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+a {
+  color:#fff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color: #fdec6e;
+  text-shadow:0px 0px 20px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.flexbox{
+	background-color: white;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+}
+.flexbox > div{
+	border-radius: 20px;
+	width: 20%;
+	height: 250px;
+	line-height: 30px;
+	margin: 30px;
+	border: 3px solid black;
+	box-shadow: -2px -2px 9px 2px grey;
+}
+.flextext{
+	display: flex;
+	font-size: 1em;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.flexprice{
+	display: flex;
+	font-size: 1em;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.flexinput{
+	display: flex;
+	font-size: 1em;
+	width: 40%;
+	height: 10%;
+	margin:0px auto;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+   opacity: 1;
+
+
+}
+
+.fleximg{
+	display: flex;
+	width: 60%;
+	height: 60%;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.but
+     {
+        margin-bottom:40px;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 1em;
+        margin-left: auto;
+        margin-right:auto;
+        display:flex;
+        transition-duration: 0.2s;
+        cursor: pointer;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px
+        rgba(0, 0, 0, 0.3);
+        letter-spacing: 2.5px;
+        outline: none;
+        margin-top:0px;
+        position: relative;
+    }
+    .buttonc
+     {
+        background-color: white;
+        color: black;
+      }
+@media (min-width: 150px) and (max-width: 468px){
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 0.6em;
+	}
+.flexbox > div{
+		border-radius: 20px;
+	width: 40%;
+	height: 250px;
+	line-height: 30px;
+	margin: 30px;
+	border: 3px solid black;
+	box-shadow: -2px -2px 9px 2px grey;
+	}
+
+
+	}
+@media (max-width: 767px) {
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 0.7em;
+	}
+	.flexbox > div{
+		border-radius: 20px;
+	width: 90%;
+	height: 250px;
+	line-height: 30px;
+	margin: 30px;
+	border: 3px solid black;
+	box-shadow: -2px -2px 9px 2px grey;
+	}
+
+
+	}
+@media (min-width: 768px) and (max-width: 979px)  {
+	h1{
+		background-color: black;
+		text-decoration-color: black;
+		text-align: center;
+		padding-top: 2.5%;
+	}
+	.flex-container > div {
+		font-size: 1em;
+		margin-right: 6%;
+	}
+	.flexbox > div{
+		border-radius: 20px;
+	width: 40%;
+	height: 250px;
+	line-height: 30px;
+	margin: 30px;
+	border: 3px solid black;
+	box-shadow: -2px -2px 9px 2px grey;
+	}
+
+
+
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="flex-container">
+		<div style="">
+			<a href="/">Logout</a>
+		</div>
+		<div>
+			<a href="/contactuslogin/">Contact Us
+			</a>
+		</div>
+		<div>
+			<a href="/aboutuslogin/">About</a>
+		</div>
+		<div>
+			<a href="/askadoctor/">Ask a Doctor</a>
+		</div>
+		<div style="">
+			<a>Welcome{{ email }}</a>
+		</div>
+	</div>
+	<h1 style=" padding-left: 1%; margin-top: -3.8%; color: white; font-size: 3em;">MedsOn
+	</h1>
+	<p style="font-size: 2em; text-align: center; font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif">Select the <b>Item</b> and it's <b>Quantity</b> you want to buy.
+	</p>
+	<form action="/store/ " method="POST">
+		{% csrf_token %}
+		<div class="flexbox">
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/PrrLYRj/combiflam.png">
+				<div class="flextext ">Combiflam</div><div class="flexprice">strip of 20 tablets - MRP ₹28</div>
+				<input class="flexinput" type="number" name="Combiflam" id="number1" placeholder="Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/Wxxy47R/paracetamol.jpg">
+				<div class="flextext">Paracetamol</div>
+				<div class="flexprice">strip of 15 tablets - MRP ₹30</div>
+				<input class="flexinput" type="number" name="Paracetamol"  id="number2" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/TTt87nP/cofsils-lozenges-orange.jpg">
+				<div class="flextext ">Cofsils</div>
+				<div class="flexprice">strip of 10 lozenges - MRP ₹30</div>
+				<input class="flexinput" type="number" name="Cofsils"  id="number3" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/QNRRBR8/digene-tablet-mint-0.png">
+				<div class="flextext ">Digene Tablet Mint</div>
+				<div class="flexprice">strip of 15 tablets - MRP ₹17</div>
+				<input class="flexinput" type="number" name="DigeneTablet"  id="number4" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/rMtNt3G/digene-gel-mint.jpg">
+				<div class="flextext">Digene Gel Mint</div>
+				<div class="flexprice">bottle of 200 ml Gel - MRP ₹100</div>
+				<input class="flexinput" type="number" name="DigeneGel"  id="number5" placeholder=" Quantity" min="0" value=0  style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/YypFCfc/dabur-hajmola-regular.jpg">
+				<div class="flextext ">Dabur Hajmola Regular</div>
+				<div class="flexprice">bottle of 120 tablets - MRP ₹32</div>
+				<input class="flexinput" type="number" name="Hajmola"  id="number6" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/r38Qwsd/seacod-capsule.png">
+				<div class="flextext">Seacod Capsule</div>
+				<div class="flexprice">bottle of 110 capsules - MRP ₹272</div>
+				<input class="flexinput" type="number" name="Seacod"  id="number7" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/YNttvKQ/shelcal-500-tablet.jpg">
+				<div class="flextext ">Shelcal 500 Tablet</div>
+				<div class="flexprice">strip of 15 tablets - MRP ₹86</div>
+				<input class="flexinput" type="number" name="Shelcal"  id="number8" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/D75HkPX/crocin-advance-tablet.jpg">
+				<div class="flextext ">Crocin Advance Tablet</div>
+				<div class="flexprice">strip of 15 tablets - MRP ₹15</div>
+				<input class="flexinput" type="number" name="Crocin"  id="number9" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/g7zvsWr/lubrifresh-gel.jpg">
+				<div class="flextext ">Lubrifresh Eye Drop</div>
+				<div class="flexprice">pack of 10 ml eye drop - MRP ₹99</div>
+				<input class="flexinput" type="number" name="Lubrifresh"  id="number10" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/YjcZ5Rr/dettol-antiseptic-liquid.png">
+				<div class="flextext">Dettol Antiseptic Liquid</div>
+				<div class="flexprice">bottle of 1 Ltr Liquid- MRP ₹266</div>
+				<input class="flexinput" type="number" name="Dettol"  id="number11" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/y8yqc01/1mg-ashwagandha-pure-natural-extract-500mg-capsule.jpg">
+				<div class="flextext">Ashwagandha 500mg Capsule</div>
+				<div class="flexprice">bottle of 60 capsules - MRP ₹296</div>
+				<input class="flexinput" type="number" name="Ashwagandha"  id="number12" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/6tTsd7D/moov-pain-relief-cream.png">
+				<div class="flextext">Moov Pain Relief Cream</div>
+				<div class="flexprice">tube of 50 gm cream - MRP ₹160</div>
+				<input class="flexinput" type="number" name="Moov"  id="number13" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/M7B9tnV/zandu-balm.jpg">
+				<div class="flextext">Zandu Balm</div><div class="flexprice">box of 8 gm balm - MRP ₹40</div>
+				<input class="flexinput" type="number" name="Zandu"  id="number14" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/hDxS03Z/vicks-vaporub.pngg">
+				<div class="flextext ">Vicks Vaporub</div>
+				<div class="flexprice">box of 50 gm balm - MRP ₹124</div>
+				<input class="flexinput" type="number" name="Vicks"  id="number15" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<div>
+				<img class="fleximg" src="https://i.ibb.co/TTQLqsh/dabur-chyawanprash-1kg-get-dabur-honey-50g-free.jpg">
+				<div class="flextext">Dabur Chyawanprash</div>
+				<div class="flexprice">jar of 1 kg paste - MRP ₹309</div>
+				<input class="flexinput" type="number" name="Chyawanprash"  id="number16" placeholder=" Quantity" min="0" value=0 style="background-color: #D3D3D3;">
+			</div>
+			<br>
+			<button type="reset" class="but buttonc">RESET</button>
+			
+			<button type="submit" class="but buttonc">ADD TO CART</button>
+		</div>
+<!-- 		<div class="form-group">
+			{% if messages %}
+			<div class="messages">
+				{% for message in messages %}
+				<div class="alert alert-success" style="color:red;text-align:center;">{{ message }}
+				</div>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div> -->
+	</form>
+</body>
+</html>
