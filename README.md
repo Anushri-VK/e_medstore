@@ -21,10 +21,12 @@ Front end:HTML,CSS
 Backend:Python3,Django
 
 <h3>To Start the project</h3>:
- To start with:
+ To start with
  $ git clone  https://github.com/Anushri-VK/e_medstore
+ 
  To get all the dependencies and plugins
  $ pip install -r requirements.txt
+ 
  To run the project go to root file where manage.py is present and run this,
  $ python manage.py runserver
  
