@@ -26,7 +26,7 @@ SECRET_KEY = 'd67=)daizvb4m0ai%0nmrf%tx0ixj$w8k7=vvm^1vbz$x5%vsi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["e-medson.herokuapp.com",]
+ALLOWED_HOSTS = ["e-medstore.herokuapp.com",]
 
 
 # Application definition
