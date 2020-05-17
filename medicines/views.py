@@ -49,10 +49,15 @@ def signup(request):
 	
 
 def signin(request):
+	print("hi")
 	if request.method=="POST":
-		email=request.POST["email"]
+		print("hello")
+		username=request.POST["username"]
+		print(username)
 		password=request.POST["password"]
-		user=authenticate(request,email=email,password=password)
+		print(password)
+
+		user=authenticate(username=username,password=password)
 
 		if user!=None:
 			login(request,user)
