@@ -16,6 +16,9 @@ You will receive a confirmation regarding your orders and appointments on your r
 username=Ashwin
 password=123456
 
+ <h3>The link to access this web</h3>:
+ https://emedstore.herokuapp.com/
+
 Software Used :
 Front end:HTML,CSS
 Backend:Python3,Django
@@ -29,10 +32,8 @@ Backend:Python3,Django
  
  $ pip install -r requirements.txt
  
- To run the project go to root file where manage.py is present and run this,
+ To run the project go to root file where manage.py is present and run this:
  
- $ python manage.py runserver:
+ $ python manage.py runserver
  
- <h3>The link to access this web</h3>:
- https://emedstore.herokuapp.com/
  
