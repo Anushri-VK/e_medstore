@@ -49,13 +49,9 @@ def signup(request):
 	
 
 def signin(request):
-	print("hi")
 	if request.method=="POST":
-		print("hello")
 		username=request.POST["username"]
-		print(username)
 		password=request.POST["password"]
-		print(password)
 
 		user=authenticate(username=username,password=password)
 

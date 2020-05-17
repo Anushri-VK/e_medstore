@@ -1,0 +1,1 @@
+web: gunicorn e_medstore.wsgi
