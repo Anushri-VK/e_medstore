@@ -13,5 +13,9 @@ You will receive a confirmation regarding your orders and appointments on your r
 • Ask a doctor (book doctor appointment online)</p>
 
 <h3>Login details</h3>
-username=Anu
-password=654321
+username=Ashwin
+password=123456
+
+Software Used :
+Front end:HTML,CSS
+Backend:Python3,Django
