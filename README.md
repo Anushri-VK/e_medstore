@@ -11,3 +11,7 @@ You will receive a confirmation regarding your orders and appointments on your r
 • About
 • Contact Us
 • Ask a doctor (book doctor appointment online)</p>
+
+<h3>Login details</h3>
+username=Anu
+password=654321
